@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-deep: #07010f;
+    --color-arcane-purple: #8b28f7;
+    --color-arcane-neon: #b026ff;
+    --color-arcane-glow: rgba(176, 38, 255, 0.4);
+    --font-cinzel: 'Cinzel', serif;
+    --font-cinzel-dec: 'Cinzel Decorative', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-tech: 'Rajdhani', sans-serif;
+  }
+
+  body {
+    background-color: var(--color-bg-deep);
+    color: #e2e8f0;
+    font-family: var(--font-tech);
+    letter-spacing: 0.025em;
+  }
+}
+
+/* CRT Scanlines and atmospheric effects */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 26, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-vignette {
+  background: radial-gradient(circle at 50% 50%, transparent 60%, rgba(4, 1, 10, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Purple Glows */
+.glow-purple-sm {
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.3);
+}
+
+.glow-purple-md {
+  box-shadow: 0 0 25px rgba(176, 38, 255, 0.45);
+}
+
+.glow-purple-lg {
+  box-shadow: 0 0 45px rgba(176, 38, 255, 0.6), inset 0 0 20px rgba(176, 38, 255, 0.2);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(176, 38, 255, 0.7), 0 0 20px rgba(139, 40, 247, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 8px rgba(250, 204, 21, 0.6), 0 0 15px rgba(217, 119, 6, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d021c;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Card sprite rendering */
+.card-sprite {
+  background-image: url('/assets/aistudio/Creating_card_deck_on_white_ac77fcc1_c933e546.jpg');
+  background-size: 700% 800%;
+  background-repeat: no-repeat;
+}

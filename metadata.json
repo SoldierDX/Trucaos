@@ -1,0 +1,6 @@
+{
+  "name": "TRUCAOS: Manilha Zero - Jogo de Truco Arcane Deckbuilder",
+  "description": "Interface visual oficial do jogo TRUCAOS: Manilha Zero. Explore o compêndio de cartas arcanas, as quatro manilhas lendárias do Truco Paulista e navegue pelo menu principal estilizado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
